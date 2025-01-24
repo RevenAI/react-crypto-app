@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* General Reset */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* other app style settings */
+.app {
+  min-height: 100vh;
+  color: #000;
+ /*  background: linear-gradient(#ffff, #ffff #201f1f88); */
+  background-color: #00d1b2;
+  padding-top: 60px; /* Tthis is adjusted to match the header height */
+}
+
+.header {
+  position: fixed;  
+  top: 0;          
+  left: 0;       
+  width: 100%;  
+  z-index: 1000;
+  background-color: #fd0505;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  box-shadow: 10px 4px 6px #cdf1001a;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.logo-icon {
+  width: 30px;
+  height: 30px;
+  background-color: #00d1b2; 
+  border-radius: 50%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+}
+
+.logo-icon::before {
+  content: "₿";
+  font-size: 18px;
+}
+
+.logo-crypto {
+  color: #00d1b2;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.logo-riches {
+  color: #ffc107;
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+.navbar-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #0000;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+}
+
+.navbar-menu.active {
+  display: flex;
+}
+
+.navbar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-item {
+  padding: 10px 0;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.navbar-item:hover {
+  background-color: #333;
+  text-align: center;
+}
+
+.signup-button {
+  margin-top: 20px;
+  background-color: #ffc107;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+}
+
+.signup-button:hover {
+  background-color: #ffca28;
+}
+
+.signInIcon {
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.footer {
+  position: relative;  
+  bottom: 0;
+  width: 100%;
+  background-color: #0000;
+  color: rgb(240, 4, 4);
+  text-align: center;
+  padding: 10px 0;
+  z-index: 999;
+}
+ 
+.footerContent p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Responsive Design */
+/* 320px: Smallest phones. */
+@media (min-width: 320px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .navbar-menu-large, .navbar-list-large {
+    display: none;
+  }
+
+  .navbar-list {
+    padding: 10px 0;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: #000; 
+    transition: background-color 0.3s;
+    display: block; 
+    text-align: center;
+  }
+    
+  .navbar-list .navbar-item:hover {
+    color: #ffca28;
+  }
+
+  .signup-button {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    background-color: #ffca28; 
+    color: #000000; 
+    border: none;
+    border-radius: 5px; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+  }
+  
+  .signup-button:hover {
+    background-color: #ffca28; 
+    transform: scale(1.05); 
+  }
+  
+  .signup-button:active {
+    transform: scale(0.95); 
+  }
+  
+  .signInIcon {
+    width: 20px; 
+    height: 20px; 
+    margin-left: 10px; 
+    filter: invert(0%); 
+  }
+  
+  .footer {
+    font-size: 12px;
+  }
+}
+
+/* Medium devices and up (768px to 1440px) */
+@media (min-width: 768px) and (max-width: 1440px) {
+  .menu-icon {
+    display: none;
+  }
+  .navbar-list, .navbar-item, .signInIcon {
+    display: none;
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px 20px;
+    background-color: #0000; 
+  }
+
+  .navbar-menu-large {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    flex-grow: 1;
+    gap: 30px;
+  }
+
+  .navbar-list-large {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar-item-large {
+    text-decoration: none;
+    font-size: 16px; 
+    font-weight: bold;
+    padding: 10px 15px; 
+    border-radius: 5px;
+    color: #ffff;
+    transition: background-color 0.3s ease, color 0.3s ease; 
+  }
+
+  .navbar-item-large:hover {
+    background-color: #1e1e1e; 
+    color: #ffca28; 
+  }
+
+  .signup-button-large {
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+    background-color: #ffca28; 
+    color: #000; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 8px 15px; 
+    font-size: 14px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    position: absolute; 
+    top: 10px; 
+    right: 20px; 
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+  }
+
+  .signup-button-large:hover {
+    background-color: #ffd740; 
+    transform: scale(1.05);
+  }
+
+  .signup-button-large:active {
+    transform: scale(0.95);
+  }
+
+  .signInIcon {
+    width: 18px;
+    height: 18px;
+    margin-left: 8px; 
+    filter: invert(0%);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Large devices and up */
+@media (min-width: 992px) {
+  /* .menu-icon {
+    display: none; 
+  }
+
+  .currency-selector {
+    display: block; 
+  } */
+}
+
+/* Extra-large devices and up */
+@media (min-width: 1200px) {
+  
+}
+
+/* 1024px: Standard tablets in landscape mode.*/
+@media (min-width: 1024px) {
+
+}
+
+/* 1440px: Large monitors. */
+@media (min-width: 1440px) {
+
+}
+
+@media (max-width: 768px) {
+  /* .menu-icon {
+    display: block;
+  }
+
+  .currency-selector {
+    display: none;
+  } */
+}
+
+@media (min-width: 769px) {
+ /*  .navbar-menu {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .signup-button {
+    width: auto;
+    margin-left: 20px;
+  } */
+}
+
+
+

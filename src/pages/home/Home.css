@@ -1,0 +1,51 @@
+.home {
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .currency-symbol-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .currency-symbol {
+    background-color: #00b4cc; /* Customize background color */
+    border-radius: 50%;
+    padding: 20px;
+    font-size: 30px; /* Make symbol a bit bigger */
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+  }
+  
+  .coin-name {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase; /* Make the name more stylish */
+  }
+  
+  h3 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
