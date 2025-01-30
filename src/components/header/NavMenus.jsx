@@ -7,17 +7,19 @@ const NavMenus = ({ isOpen, toggleMenu }) => {
   return (
     <nav className={`navbar-menu ${isOpen ? "active" : ""}`}>
       <ul className="navbar-list">
-        <li><Link className="navbar-item-large" to="/">Home</Link></li>
-        <li><Link className="navbar-item-large" to={`/profile/${userID}`}>Profile</Link></li>
-        <li><Link className="navbar-item-large" to="/features">Features</Link></li>
-        <li><Link className="navbar-item-large" to="/about">About</Link></li>
-        <li><Link className="navbar-item-large" to="/pricing">Pricing</Link></li>
+        <li><Link className="navbar-item" to="/">Home</Link></li>
+        <li><Link className="navbar-item" to={`/profile/${userID}`}>Profile</Link></li>
+        <li><Link className="navbar-item" to="/features">Features</Link></li>
+        <li><Link className="navbar-item" to="/about">About</Link></li>
+        <li><Link className="navbar-item" to="/pricing">Pricing</Link></li>
 
         {/* Sign-Up Button */}
-        <button className="signup-button" onClick={toggleMenu}>
+        <Link to="/sign-up">
+          <button className="signup-button" onClick={toggleMenu}>
           <h3>Sign up</h3>
-          <img src={signInIcon} alt="Click to sign in." className="signInIcon" />
-        </button>
+            <img src={signInIcon} alt="Click to sign in." className="signInIcon" />
+          </button>
+        </Link>
       </ul>
     </nav>
   );
